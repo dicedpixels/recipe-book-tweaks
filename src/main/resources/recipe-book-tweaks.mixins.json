@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.dicedpixels.recipebooktweaks.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+  ],
+  "client": [
+    "Ungroup",
+    "Search",
+    "Unlock",
+    "Toast",
+    "Bounce"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

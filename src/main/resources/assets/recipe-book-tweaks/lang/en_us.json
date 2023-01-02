@@ -1,0 +1,7 @@
+{
+  "text.autoconfig.recipe-book-tweaks.title": "\u00A7lRecipe Book Tweaks",
+  "text.autoconfig.recipe-book-tweaks.option.bounce": "Bounce effect for new recipes",
+  "text.autoconfig.recipe-book-tweaks.option.ungroup": "Ungroup recipes into individual recipe",
+  "text.autoconfig.recipe-book-tweaks.option.unlock": "Unlock all recipes",
+  "text.autoconfig.recipe-book-tweaks.option.unlock.@PrefixText": "\u00A7c\u00A7lPer-world settings"
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "recipe-book-tweaks",
+  "version": "${version}",
+
+  "name": "Recipe Book Tweaks",
+  "description": "Adds a few vanilla-adjacent QOL tweaks to the recipe book.",
+  "authors": [
+    "dicedpixels",
+    "marshmallow"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+  "license": "MIT",
+  "icon": "assets/recipe-book-tweaks/icon.png",
+
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "com.dicedpixels.recipebooktweaks.RecipeBookTweaks"
+    ],
+    "modmenu": [
+      "com.dicedpixels.recipebooktweaks.ModMenu"
+    ]
+  },
+  "mixins": [
+    "recipe-book-tweaks.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.11",
+    "minecraft": "~1.19.3",
+    "java": ">=17"
+  }
+}
