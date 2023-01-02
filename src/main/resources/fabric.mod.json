@@ -10,8 +10,8 @@
     "marshmallow"
   ],
   "contact": {
-    "homepage": "",
-    "sources": ""
+    "homepage": "https://github.com/dicedpixels",
+    "sources": "https://github.com/dicedpixels/recipe-book-tweaks"
   },
 
   "license": "MIT",
