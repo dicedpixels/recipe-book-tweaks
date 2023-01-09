@@ -7,7 +7,7 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry.Gui.PrefixText;
 
 @Config(name = "recipe-book-tweaks")
 @Background(Background.TRANSPARENT)
-public class ModConfig implements ConfigData {
+public class RecipeBookTweaksConfig implements ConfigData {
     public boolean bounce = true;
     public boolean ungroup = false;
 

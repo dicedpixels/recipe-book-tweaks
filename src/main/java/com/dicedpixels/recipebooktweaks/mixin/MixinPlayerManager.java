@@ -9,10 +9,11 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+// Unlocks all recipes when player logs into a world
 @Mixin(PlayerManager.class)
-public class Unlock {
+abstract class MixinPlayerManager {
     @Inject(method = "onPlayerConnect", at = @At("RETURN"))
-    public void onOnPlayerConnect(ClientConnection connection, ServerPlayerEntity player, CallbackInfo callbackInfo) {
+    private void onOnPlayerConnect(ClientConnection connection, ServerPlayerEntity player, CallbackInfo callbackInfo) {
         if (RecipeBookTweaks.config.unlock) {
             player.unlockRecipes(player.server.getRecipeManager().values());
         }

@@ -13,14 +13,15 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.Set;
 
+// Disables bounce animations for newly discovered recipes
 @Mixin(RecipeBook.class)
-public class Bounce {
+abstract class MixinRecipeBook {
     @Shadow
     @Final
     protected Set<Identifier> toBeDisplayed;
 
     @Inject(method = "shouldDisplay", at = @At("HEAD"), cancellable = true)
-    public void shouldDisplay(Recipe<?> recipe, CallbackInfoReturnable<Boolean> returnable) {
+    private void onShouldDisplay(Recipe<?> recipe, CallbackInfoReturnable<Boolean> returnable) {
         if (RecipeBookTweaks.config.bounce) {
             returnable.setReturnValue(toBeDisplayed.contains(recipe.getId()));
         } else {

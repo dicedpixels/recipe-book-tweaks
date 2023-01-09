@@ -8,12 +8,12 @@ import org.slf4j.LoggerFactory;
 
 public class RecipeBookTweaks implements ModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger("recipe-book-tweaks");
-    public static ModConfig config;
+    public static RecipeBookTweaksConfig config;
 
     @Override
     public void onInitialize() {
-        AutoConfig.register(ModConfig.class, GsonConfigSerializer::new);
-        config = AutoConfig.getConfigHolder(ModConfig.class).getConfig();
+        AutoConfig.register(RecipeBookTweaksConfig.class, GsonConfigSerializer::new);
+        config = AutoConfig.getConfigHolder(RecipeBookTweaksConfig.class).getConfig();
 
         LOGGER.info("Recipe Book Tweaks initialized.");
     }

@@ -6,11 +6,11 @@
   "mixins": [
   ],
   "client": [
-    "Ungroup",
-    "Search",
-    "Unlock",
-    "Toast",
-    "Bounce"
+    "MixinClientRecipeBook",
+    "MixinPlayerManager",
+    "MixinRecipeBook",
+    "MixinRecipeBookWidget",
+    "MixinRecipeToast"
   ],
   "injectors": {
     "defaultRequire": 1

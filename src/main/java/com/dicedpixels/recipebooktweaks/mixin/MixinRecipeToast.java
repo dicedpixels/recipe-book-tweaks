@@ -9,10 +9,11 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+// Disables recipe toasts
 @Mixin(RecipeToast.class)
-public class Toast {
-    @Inject(at = @At("HEAD"), method = "draw", cancellable = true)
-    public void onDraw(MatrixStack matrices, ToastManager manager, long startTime, CallbackInfoReturnable<Visibility> returnable) {
+abstract class MixinRecipeToast {
+    @Inject(method = "draw", at = @At("HEAD"), cancellable = true)
+    private void onDraw(MatrixStack matrices, ToastManager manager, long startTime, CallbackInfoReturnable<Visibility> returnable) {
         returnable.setReturnValue(Visibility.HIDE);
     }
 }

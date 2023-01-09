@@ -23,7 +23,7 @@
       "com.dicedpixels.recipebooktweaks.RecipeBookTweaks"
     ],
     "modmenu": [
-      "com.dicedpixels.recipebooktweaks.ModMenu"
+      "com.dicedpixels.recipebooktweaks.RecipeBookTweaksModMenu"
     ]
   },
   "mixins": [

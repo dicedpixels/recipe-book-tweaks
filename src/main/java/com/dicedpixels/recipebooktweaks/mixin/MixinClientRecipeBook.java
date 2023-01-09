@@ -17,13 +17,14 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
+// ungroups recipes into individual recipes
 @Mixin(ClientRecipeBook.class)
-public class Ungroup extends RecipeBook {
+abstract class MixinClientRecipeBook extends RecipeBook {
     @Shadow
     private Map<RecipeBookGroup, List<RecipeResultCollection>> resultsByGroup;
 
     @Inject(method = "getResultsForGroup", at = @At("HEAD"), cancellable = true)
-    protected void onGetResultsForGroup(RecipeBookGroup category, CallbackInfoReturnable<List<RecipeResultCollection>> returnable) {
+    private void onGetResultsForGroup(RecipeBookGroup category, CallbackInfoReturnable<List<RecipeResultCollection>> returnable) {
         if (RecipeBookTweaks.config.ungroup) {
             List<RecipeResultCollection> rrcForCategory = resultsByGroup.getOrDefault(category, Collections.emptyList());
             List<RecipeResultCollection> rrcUngrouped = Lists.newArrayList(rrcForCategory);

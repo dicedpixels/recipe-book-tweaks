@@ -17,8 +17,9 @@ import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 import java.util.List;
 import java.util.Locale;
 
+// Enables search when recipes are ungrouped
 @Mixin(RecipeBookWidget.class)
-public class Search {
+abstract class MixinRecipeBookWidget {
     @Shadow
     protected AbstractRecipeScreenHandler<?> craftingScreenHandler;
     @Shadow
@@ -36,7 +37,7 @@ public class Search {
             List<RecipeResultCollection> rrcForGroup,
             List<RecipeResultCollection> rrcUpdated,
             String searchFieldText) {
-//
+
         rrcUpdated.removeIf((rrc) -> {
             for (Recipe<?> recipe : rrc.getAllRecipes()) {
                 String recipeName = recipe.getOutput().getName().getString().toLowerCase(Locale.ROOT);
