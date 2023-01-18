@@ -1,0 +1,7 @@
+{
+  "text.autoconfig.recipe-book-tweaks.title": "\u00A7lRecipe Book Tweaks",
+  "text.autoconfig.recipe-book-tweaks.option.bounce": "Эффект подпрыгивания для новых рецептов",
+  "text.autoconfig.recipe-book-tweaks.option.ungroup": "Группировать рецепты в отдельный рецепт",
+  "text.autoconfig.recipe-book-tweaks.option.unlock": "Разблокировать все рецепты",
+  "text.autoconfig.recipe-book-tweaks.option.unlock.@PrefixText": "\u00A7c\u00A7lНастройки для каждого мира"
+}
